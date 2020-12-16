@@ -22,7 +22,8 @@
   import ThirdStep from "./third-step/ThirdStep"
   import FormErrors from "./FormErrors/FormErrors"
 
-  import {required, between, integer, alpha} from "vuelidate/lib/validators"
+  import {required, between, integer, alpha} from "vuelidate/lib/validators" 
+  // alpha валидирует только английские буквы
 
   export default {
       components: {
@@ -33,7 +34,7 @@
     },
     data: () => {
       return {
-        formStatus: null,
+        formStatus: null, // Есть ли ошибки
         FormStep1: {
           surname: "",
           name: "",
@@ -94,7 +95,7 @@
         } else {
           this.formStatus = "OK";
           for (var i = 0; i <= 22; i++) {
-            this.$refs.contentBox.children[1][i].checked 
+            this.$refs.contentBox.children[1][i].checked // Чтобы чекбоксу поставить false
               ? this.$refs.contentBox.children[1][i].checked = false
               : this.$refs.contentBox.children[1][i].value = "";
           }
