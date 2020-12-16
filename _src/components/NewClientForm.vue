@@ -2,7 +2,7 @@
   <div class="div">
     <div class="content-box" v-bind:class="{onSuccess: this.formStatus == 'OK', onFail: this.formStatus == 'ERROR'}" ref="contentBox"> 
       <h1 class="title">Регистрация клиента</h1>
-        <form class="form" @submit.prevent="submitClick">
+        <form class="form" @submit.prevent="submitClick"> <!-- prevent - убрать дефолтную перезагрузку -->
           <div class="wrapper">
             <FirstStep v-bind:FormStep1="FormStep1" :$v="$v" :formStatus="formStatus"/>
             <SecondStep v-bind:FormStep2="FormStep2" :$v="$v" :formStatus="formStatus"/>
