@@ -21,7 +21,7 @@
       <span v-if="$v.FormStep3.issuedBy.$invalid && this.formStatus == 'ERROR'" class="error-msg"><pre>  Кем выдан</pre></span>
 
   </div>
-    <!-- Проверка на нажатие кнопки this.formStatus == 'ERROR'" -->
+    <!-- Проверка на нажатие кнопки this.formStatus == 'ERROR'" и валидность конкретного инпута -->
 </template> 
 
 <script>
